@@ -1,7 +1,10 @@
-# Javascript Arrays: Strings
+# Javascript Array Exercise: String Manipulation
 
 ## Description
-Introduction to string manipulation and arrays; reverse order, alphabetize order, and determining palindromes.
+Practice with arrays and string manipulation: 
+* reverse order
+* alphabetize order
+* determining palindromes
 
 ## How to run
 In your terminal run:
