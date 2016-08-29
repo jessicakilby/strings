@@ -8,7 +8,7 @@ var character = String.fromCharCode(code);
     if (AllowRegex.test(character)) return true;     
     return false; 
 }
-// Implement the logic in the reversal function that reverses the order of the characters in the string, and outputs the result in the DOM, below the text input.
+
 var input = document.getElementById('input');
 var rev = document.getElementById('rev');
 var alph = document.getElementById('alph');
@@ -28,8 +28,6 @@ function reversal() {
 	html = "<div>Your sentence in reverse: "+"<strong>"+revInput+"</strong></div>";
 	print(html);
 }
-	
-// Implement the logic in the alphabits function that return the characters in alphabetical order, and outputs the result in the DOM, below the text input.
 
 function alphabits() {
 	var newInput = input.value;
@@ -43,8 +41,19 @@ function alphabits() {
 // Implement the logic in the palindrome function that determine whether the string is a palindrome. If it is, display the text "Your string is a palidrome" in the DOM, below the text input.
 
 function palindrome() {
-
+	var newInput = input.value;
+	var palSplit = newInput.split("");
+	var palRev = palSplit.reverse().join("");
+	if (newInput === palRev){
+		html = "<div>Your sentence was a plalindrome: </br>'"+newInput+"' <strong>equals</strong> '"+palRev+"'</div>";
+		print(html);
+	} else {
+		html = "<div>Sorry it is not a plalindrome: </br>'"+newInput+"' <strong>does not equal</strong> '"+palRev+"'</div>";
+		print(html);
+	}
 }
+
+
 rev.addEventListener("click", reversal);
 alph.addEventListener("click", alphabits);
 pal.addEventListener("click", palindrome);
